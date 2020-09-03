@@ -11,7 +11,7 @@ var connection = mysql.createConnection({
 
   user: "root",
 
-  password: "",
+  password: "huhkohuhko",
   database: "employees_db",
 });
 
@@ -472,8 +472,6 @@ function deleteDepartment(department) {
       ])
       .then(function (answer) {
         const departmentRemoved = answer.remove;
-        // console.log(departmentRemoved);
-        // const lastName = split[1];
         connection.query(
           `DELETE FROM department WHERE department_name=?`,
           [departmentRemoved],
